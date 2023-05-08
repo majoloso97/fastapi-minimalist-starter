@@ -1,0 +1,1 @@
+# FastAPI minimalist starter
