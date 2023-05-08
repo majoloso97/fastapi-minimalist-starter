@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  fastapi-minimalist-starter:
+    image: fastapi-minimalist-starter
+    container_name: fastapi-minimalist-starter
+    environment:
+      - HELLO_MSG=Hello! This is a minimalistic FastAPI starter template.
+      - WELCOME_TEMPLATE=Hey{}! Welcome to the API!
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "80:80"
