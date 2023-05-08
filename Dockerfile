@@ -15,7 +15,7 @@ COPY ./requirements.txt /requirements.txt
 # Install the package dependencies in the requirements file.
 RUN pip install --no-cache-dir --upgrade -r /requirements.txt
 
-# Copy the ./app directory inside the /code directory.
+# Copy the ./src directory inside the /app directory.
 # As this has all the code which is what changes most frequently the Docker cache won't be used for this or any following steps easily.
 # So, it's important to put this near the end of the Dockerfile, to optimize the container image build times.
 COPY ./src /app/src
